@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { useRestaurantStore, RestaurantType } from "@/store/useRestaurantStore";
+import { useRestaurantStore, RestaurantType } from "@/modules/store/useRestaurantStore";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

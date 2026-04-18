@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Search, Plus, ArrowRight, MapPin } from "lucide-react";
-import { useRestaurantStore } from "@/store/useRestaurantStore";
+import { Search, Plus, ArrowRight } from "lucide-react";
+import { useRestaurantStore } from "@/modules/store/useRestaurantStore";
 import RestaurantCard from "@/modules/components/RestaurantCard";
-
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
   const { restaurants } = useRestaurantStore();
@@ -25,7 +22,7 @@ export default function HomePage() {
   const featuredRestaurants = filteredRestaurants.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-slate-50 p-6 md:p-12">
+    <div className="min-h-screen bg-zinc-950 text-slate-50 p-4 sm:p-6 md:p-12">
       <div className="max-w-6xl mx-auto space-y-8">
 
         {/* Header Section */}
@@ -35,22 +32,22 @@ export default function HomePage() {
             <p className="text-zinc-400 mt-1">Your curated list of premium dining spots.</p>
           </div>
 
-          <Link href="/manage/restaurant/add">
-            <Button className="bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/20">
+          <Link href="/manage/restaurant/add" className="w-full md:w-auto">
+            <Button className="w-full bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/20">
               <Plus className="mr-2 h-4 w-4" /> Add Restaurant
             </Button>
           </Link>
         </header>
 
         {/* Search Bar */}
-        <div className="relative max-w-md">
+        <div className="relative max-w-md w-full">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-zinc-500" />
           <Input
             type="text"
-            placeholder="Search by name or type (e.g., Cafe)..."
+            placeholder="Search by name or type..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 bg-zinc-900 border-zinc-800 text-slate-50 placeholder:text-zinc-500 focus-visible:ring-red-600"
+            className="pl-10 w-full bg-zinc-900 border-zinc-800 text-slate-50 placeholder:text-zinc-500 focus-visible:ring-red-600"
           />
         </div>
 
@@ -67,10 +64,9 @@ export default function HomePage() {
           )}
         </div>
 
-        {/* Bottom CTA */}
         <div className="flex justify-center pt-6">
-          <Link href="/restaurants">
-            <Button variant="outline" className="border-zinc-700 text-zinc-950 hover:bg-zinc-800 hover:text-slate-50 transition-colors">
+          <Link href="/restaurants" className="w-full sm:w-auto">
+            <Button variant="outline" className="w-full border-zinc-700 text-zinc-950 hover:bg-zinc-800 hover:text-slate-50 transition-colors">
               View All Restaurants <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>

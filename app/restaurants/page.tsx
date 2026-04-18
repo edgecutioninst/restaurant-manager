@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRestaurantStore, RestaurantType } from "@/store/useRestaurantStore";
+import { useRestaurantStore, RestaurantType } from "@/modules/store/useRestaurantStore";
 import RestaurantCard from "@/modules/components/RestaurantCard";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,6 @@ const ITEMS_PER_PAGE = 6;
 export default function RestaurantsPage() {
     const { restaurants } = useRestaurantStore();
 
-    // States
     const [searchQuery, setSearchQuery] = useState("");
     const [debouncedQuery, setDebouncedQuery] = useState("");
     const [selectedType, setSelectedType] = useState<string>("all");

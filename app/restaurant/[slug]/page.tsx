@@ -4,7 +4,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { ArrowLeft, MapPin, User, Phone, Trash2, Edit } from "lucide-react";
-import { useRestaurantStore } from "@/store/useRestaurantStore";
+import { useRestaurantStore } from "@/modules/store/useRestaurantStore";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
