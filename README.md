@@ -2,7 +2,10 @@
 
 A responsive admin dashboard for managing restaurant listings. Built as a technical assessment focusing on clean architecture, intuitive UX, and robust global state management.
 
-🔗 **Live Demo:** [vercel link goes here]
+🔗 **Live Demo:** [https://restaurant-manager-iota.vercel.app/]
+
+<img width="1899" height="872" alt="Screenshot 2026-04-18 105826" src="https://github.com/user-attachments/assets/f0b1fa37-e383-4b27-9163-a9f311e2bbef" />
+
 
 ---
 
@@ -40,7 +43,7 @@ The application utilizes a high-contrast "Dark Mode". Because this is an adminis
 **1. Clone the repository**
 ```bash
 git clone https://github.com/edgecutioninst/restaurant-manager.git
-cd Orbit
+cd restaurant-manager
 ```
 
 **2. Install dependencies**
